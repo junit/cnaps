@@ -84,7 +84,7 @@ if __name__ == '__main__':
     p = Pool(processes=cpu_count()*2)
     base_bank_branch_url = 'http://www.zybank.com.cn/eportal/ui?moduleId=0e014749013b439aab3f22c794bd61ea&struts.portlet.action=/portlet/cnaps-front!queryCnaps.action&areacode=%s&clscode=%s'
     for bank_item in bank_items:
-        bank_branch_base_path = root_path + "/bank/" + bank_item["clscode"]
+        bank_branch_base_path = root_path + "/bank/" + bank_item["clscode"][0:3]
         if not os.path.exists(bank_branch_base_path):
             os.makedirs(bank_branch_base_path)
         for city_item in city_items:
