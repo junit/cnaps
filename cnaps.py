@@ -58,7 +58,7 @@ def downloadBankBranch(url, file_path):
             item["tel"].encode("utf8"), effectDate.encode("utf8")))
                 
 if __name__ == '__main__':
-    root_path = "assets"
+    root_path = "./assets"
     if not os.path.exists(root_path):
         os.makedirs(root_path)
 
